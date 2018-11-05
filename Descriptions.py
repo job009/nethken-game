@@ -7,43 +7,178 @@
 #################### Item Descriptions ###################### 
 # These should be grouped by what room that item is in
 
-##### Foyer #####
+##### Hallway 1 #####
+empty_chairs = "Seing them vacant leaves you with the eery feeling of \
+knowing that this place was once full of life."
+pictures = "Just a bunch of old men hanging on the wall."
 
-coat_rack = "You see a coat rack with a few coats and umbrellas hanging from it. Behind the coats you notice a [baseball_bat]"
+##### Hallway 2 #####
+empty_chairs = "Seing them vacant leaves you with the eery feeling of \
+knowing that this place was once full of life."
+fire_alarm = "This is an emergency but not that kind."
 
-##### Dining Hall #####
-dining_table = "There seems to be a meal prepared for one. Does this guy live alone?"
+##### Hallway 3 ###
+empty_chairs = "Seing them vacant leaves you with the eery feeling of \
+knowing that this place was once full of life."
 
-##### Courtyard #####
-shoe_rack = "You see a place where shoes are stored before going inside. You see a nice pair of [tennis_shoes]. They are much better than the boots that you are wearing right now."
+##### Hallway 4 #####
+empty_chairs = "Seing them vacant leaves you with the eery feeling of \
+knowing that this place was once full of life."
+cyber_storm_poster = "'Prepare to be hacked'... "
 
-##### Museum #####
-tiger = "There is a taxidermied tiger jumping out of the wall."
-old_gun = "Very old gun framed on the wall. It does not work."
+##### Hallway 5 #####
+empty_chairs = "Seing them vacant leaves you with the eery feeling of \
+knowing that this place was once full of life."
+
+##### Bathroom 128 #####
+writing_on_the_walls = "'The way out is in' You figure they were trying to \
+be profound but it's hard to be profound when you decide to write on a wall."
+vacant_stall = "There's urine all over the place. Maybe you should pass on \
+this one."
+
+##### 105 #####
+andre = "Dead as a post. Guess you could say he will be Russain to the after \
+life."
+cart = "Looks like there's something under the pile of spare parts."
+spare_parts = "After digging through the pile of junk, you you find a \
+mysterious controller."
+
+##### Andre's Office #####
+desk = "It's cluttered with papers of robot research."
+computer = "Internet Explorer is open to an article entitled 'Robots Gone \
+Rouge.' Maybe he was preparing for this. You figure you would prepare for death\
+too if you used Internet Explorer."
+
+##### Robotics Lab 157 #####
+spare_parts = "Screws and wheeles cover the floors. Be careful to watch your\
+step; you don't want to make any loud noises."
+white_board = "Hanging on the wall, the board reads 'Beep boop boop beeeeeeep.'"
+
+##### Class 156 #####
+desks = "Theres nothing on them."
+chairs = "All pushed in neatly."
+
+##### Abdoulahi's Office #####
+pictures = "He has lots of family pictures on his desk and even more on the walls."
+
+##### Class 153 ###
+desks = "Theres nothing on them."
+chairs = "All pushed in neatly."
+
+##### Bathroom 152 #####
+toilet_paper = "Kinda damp and you aren't really sure why so best leave it \
+alone."
+dirty_sinks = "Have they just not been cleaned or is that all staines?"
+
+##### Optoelectronics Lab #####
 
 
-##### Library #####
-cigarettes = "It seems he was smoking in his study while reading a [book]."
+##### Gates' Office #####
+books = "Text books and scholarly journals scattered on the bookshelf."
+desk = "There are papers and pens scattered all over the place."
+
+##### Storage 148 ###
+piles_of_junk = "When you move things around it looks like it is just a bunch \
+of pare parts and wires"
+
+##### Class 145 #####
+desks = "Theres nothing on them."
+chairs = "All pushed in neatly."
+
+##### Empty Office 143 #####
+walls = "Theres nothing in here but the walls feel like they are closing in."
+
+##### The Grid 142 #####
+chained_power_strips = "You are pretty sure this is a fire hazard but nothing \
+has burned down yet so oh well."
+couches = "A soft space to slouch around and play videogames."
+paintings = "There are painting of various things on the walls from tv shows\
+ to abstract colors."
+
+##### Wilkerson's Office ###
+desk = "Not much on it just the desktop and some pens."
+pictures = "Famiy pictures hung on the walls showing how happy they all are."
+
+##### Big Class 140 #####
+desks = "Theres nothing on them."
+chairs = "All pushed in neatly."
+
+##### Storage 138 #####
+piles_of_junk = "When you move things around it looks like it is just a bunch \
+of pare parts and wires"
+
+##### Confrence Room 136 #####
+table = "An oval table to make sure everyone can see eachother."
+chairs = "The comfy rolling kind."
+
+##### Faculty Bathroom 134 ###
+toilet_paper = "Kinda damp and you aren't really sure why so best leave it \
+alone."
+dirty_sinks = "Have they just not been cleaned or is that all staines?"
+
+##### Janitor Closet 132 #####
+cleaning_supplies = "Full of mops and sanitizers."
+
+##### Waiting Room 127 #####
+chairs = "Empty chairs lining the walls where people sat just earlier today."
+
+##### Random Office 125 #####
+walls = "Theres nothing in here but the walls feel like they are closing in."
+
+##### Random Office 123 #####
+walls = "Theres nothing in here but the walls feel like they are closing in."
+
+##### Class 122 #####
+desks = "Theres nothing on them."
+chairs = "All pushed in neatly."
+
+##### Turner's Office 121 #####
+desk = "Theres clutter all over it. You woder how any work gets done."
+book_shelves = "Filled to the top with various textbooks."
+
+##### Class 120 ###
+desks = "Theres nothing on them."
+chairs = "All pushed in neatly."
+
+##### Choi's Office 119 #####
+desk = "There's lots of academic writings spread out on topjof it."
+couch = "A place for some downtime when the work day gets too hard."
+
+##### Storage 118 #####
+piles_of_junk = "When you move things around it looks like it is just a bunch \
+of pare parts and wires"
+
+##### Drozdenso's Office 117 #####
+books = "Text books and scholarly journals scattered on the bookshelf."
+desk = "There are papers and pens scattered all over the place."
+
+##### O'Neal's Office 115 #####
+desk = "Theres clutter all over it. You woder how any work gets done."
+book_shelves = "Filled to the top with various textbooks."
+
+##### Office Extension 113 ####
+chairs = "Empty chairs lining the walls where people sat just earlier today."
+
+#### Unoccupied Office 111 ####
+walls = "Theres nothing in here but the walls feel liek they are closing in."
 
 
-##### Study #####
-pictures = "He has lots of family pictures, they must be somewhere, it sure looks like he lives by himself."
+##### Instrument Room 106 #####
 
 
-##### Kitchen #####
-orange_juice = "You are so tired and thirsty, that [orange_juice] will sure help"
+##### Power Systems Lab #####
 
 
-##### Lounge #####
-belt = "There is a [belt] on the couch. You have saggy pants and need it."
+##### Machinery Class 103 #####
 
 
-##### Master Bedroom #####
-bedside_table = "The bedside table has an open drawer. It has a [hair_tie] but will it have a [key]?"
+##### Electrical Distibution 102 #####
 
 
-##### Courtyard #####
-shoe_rack = "You see a place where shoes are stored before going inside. You see a nice pair of [tennis_shoes]. They are much better than the boots that you are wearing right now."
+##### Data Mining Lab #####
+
+
+##### Power Systems Lab ###
 
 
 ################## Grabbable Descriptions ####################
