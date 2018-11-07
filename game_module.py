@@ -63,10 +63,10 @@ class Game(Frame):
                 hallway_5.addHallway("hallway_4", hallway_4)
 
 
-                _160 = Room("Locked Classroom", "160", "")
+                _160 = Room("Classroom", "160", "", True)
                 _160.addExit("hall", hallway_5)
 
-                _158 = Room("Locked Classroom", "158", "")
+                _158 = Room("Classroom", "158", "", True)
                 _158.addExit("hall", hallway_5)
 
                 _157 = Room("Machine Vision/AI (Robotics Lab)", "157", "roboticslab.gif")
@@ -78,58 +78,58 @@ class Game(Frame):
                 _155 = Room("Dr. Ibrahim Abdoulahi's Office", "155", "")
                 _155.addExit("hall", hallway_5)
 
-                _154 = Room("Locked Classroom","149","")
+                _154 = Room("Classroom", "149", "", True)
                 _154.addExit("hall", hallway_5)
 
-                _153 = Room("Classroom","153","")
+                _153 = Room("Classroom", "153", "")
                 _153.addExit("hall", hallway_5)
 
-                _152 = Room("Bathroom","152","")
+                _152 = Room("Bathroom", "152", "")
                 _152.addExit("hall", hallway_5)
 
-                _151 = Room("Optoelectronics Lab","151","")
+                _151 = Room("Optoelectronics Lab", "151", "")
                 _151.addExit("hall", hallway_4)
 
-                _149 = Room("Dr. Miguel Gates' Office","149","")
+                _149 = Room("Dr. Miguel Gates' Office", "149", "")
                 _149.addExit("hall", hallway_4)
 
-                _148 = Room("Storage", "148" ,"")
+                _148 = Room("Storage", "148" , "")
                 _148.addExit("hall", hallway_4)
 
-                _147 = Room("Dr. Andrey Timofeyev's Office","147","")
+                _147 = Room("Dr. Andrey Timofeyev's Office", "147", "")
                 _147.addExit("hall", hallway_4)
 
-                _146 = Room("Locked Classroom", "146" ,"")
+                _146 = Room("Classroom", "146" , "", True)
                 _146.addExit("hall", hallway_4)
 
-                _145 = Room("Classroom","145","")
+                _145 = Room("Classroom", "145", "")
                 _145.addExit("hall", hallway_4)
 
-                _144 = Room("Computer Lab", "144","")
+                _144 = Room("Computer Lab", "144", "")
                 _144.addExit("hall", hallway_4)
 
-                _143 = Room("Unoccupied Office","143","")
+                _143 = Room("Unoccupied Office", "143", "", True)
                 _143.addExit("hall", hallway_4)
 
                 _142 = Room("The Grid", "142", "")
                 _142.addExit("hall", hallway_4)
 
-                _141 = Room("Charlotte Wilkerson's Office","141","")
+                _141 = Room("Charlotte Wilkerson's Office", "141", "")
                 _141.addExit("hall", hallway_4)
 
-                _140 = Room("Big Classroom","140","")
+                _140 = Room("Big Classroom", "140", "")
                 _140.addExit("hall", hallway_3)
 
-                _138 = Room("Storage", "138", "")
+                _138 = Room("Storage", "138", "", True)
                 _138.addExit("hall", hallway_3)
 
                 _136 = Room("Conference Room", "136", "")
                 _136.addExit("hall", hallway_3)
 
-                _134 = Room("Faculty Bathroom","134","")
+                _134 = Room("Faculty Bathroom", "134", "")
                 _134.addExit("hall", hallway_3)
 
-                _132 = Room("Janitor" , "132", "")
+                _132 = Room("Janitor" , "132", "", True)
                 _132.addExit("hall", hallway_3)
 
                 _128 = Room("Bathroom", "128", "")
@@ -140,7 +140,7 @@ class Game(Frame):
                 _127 = Room("Dean Waiting Room", "127", "")
                 _127.addExit("hall", hallway_2)
 
-                _125 = Room("Office", "125", "")
+                _125 = Room("Office", "125", "", True)
                 _125.addExit("hall", hallway_2)
 
                 _123 = Room("Office", "123", "")
@@ -149,28 +149,28 @@ class Game(Frame):
                 _122 = Room("Classroom", "122", "")
                 _122.addExit("hall", hallway_2)
 
-                _121 = Room("Dr. Galen E. Turner's Office","121","")
+                _121 = Room("Dr. Galen E. Turner's Office", "121", "", True)
                 _121.addExit("hall", hallway_2)
 
                 _120 = Room("Classroom", "120", "")
                 _120.addExit("hall", hallway_2)
 
-                _119 = Room("Dr. Ben Choi's Office","119","")
+                _119 = Room("Dr. Ben Choi's Office", "119", "")
                 _119.addExit("hall", hallway_2)
 
                 _118 = Room("Storage", "118", "")
                 _118.addExit("hall", hallway_2)
 
-                _117 = Room("Dr. Ben Drozdenso's Office","117","")
+                _117 = Room("Dr. Ben Drozdenso's Office", "117", "")
                 _117.addExit("hall", hallway_2)
 
-                _115 = Room("Dr. Michael O'Neal's Office","115", "")
+                _115 = Room("Dr. Michael O'Neal's Office", "115", "")
                 _115.addExit("hall", hallway_2)
 
                 _113 = Room("Office Extension", "113", "")
                 _113.addExit("hall", hallway_2)
 
-                _111 = Room("Unoccupied Office","111","")
+                _111 = Room("Unoccupied Office", "111", "", True)
                 _111.addExit("hall", hallway_2)
 
                 _107 = None
@@ -181,16 +181,16 @@ class Game(Frame):
                 _105 = Room("Classroom", "105", "")
                 _105.addExit("hall", hallway_1)
 
-                _104 = Room("Power System Labs","104","")
+                _104 = Room("Power System Labs", "104", "")
                 _104.addExit("hall", hallway_1)
 
-                _103 = Room("Machinary Classroom","103","")
+                _103 = Room("Machinary Classroom", "103", "")
                 _103.addExit("hall", hallway_1)
 
-                _102 = Room("Electrical Distribution","102","")
+                _102 = Room("Electrical Distribution", "102", "")
                 _102.addExit("hall", hallway_1)
 
-                _101 = Room("Data Mining Lab","101","")
+                _101 = Room("Data Mining Lab", "101", "")
                 _101.addExit("hall", hallway_1)
 
                 _100 = Room("Power Systems Lab", "100", "")
@@ -337,24 +337,22 @@ class Game(Frame):
                         if (verb == "go"):
                                 response = "Invalid input."
                                 if hasattr(Game.currentLoc, 'exits'):
-                                    if (noun in Game.currentLoc.exits):
-                                            Game.currentLoc =\
-                                                Game.currentLoc.exits[noun]
-                                            response = "Exited."
+                                        if (noun in Game.currentLoc.exits):
+                                                Game.currentLoc = Game.currentLoc.exits[noun]
+
+                                                response = "Exited."
 
                                 if hasattr(Game.currentLoc, 'rooms'):
-                                    if (noun in Game.currentLoc.rooms):
-                                            Game.currentLoc = \
-                                                Game.currentLoc.rooms[noun]
+                                        if (noun in Game.currentLoc.rooms):
+                                                 Game.currentLoc = Game.currentLoc.rooms[noun]
 
-                                            response = "Room changed."
+                                                 response = "Room changed."
 
                                 if hasattr(Game.currentLoc, 'hallways'):
-                                    if (noun in Game.currentLoc.hallways):
-                                            Game.currentLoc =\
-                                                Game.currentLoc.hallways[noun]
+                                        if (noun in Game.currentLoc.hallways):
+                                                Game.currentLoc = Game.currentLoc.hallways[noun]
 
-                                            response = "Hallway changed."
+                                                response = "Hallway changed."
 
                         elif (verb == "look"):
                                 response = "I don't see that item."

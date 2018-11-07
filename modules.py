@@ -66,14 +66,6 @@ class Room(object):
             self._name = value
 
         @property
-        def locked(self):
-            return self._locked
-
-        @locked.setter
-        def locked(self, value):
-            self._locked = value
-
-        @property
         def number(self):
             return self._number
 
@@ -128,7 +120,7 @@ class Room(object):
             self._items[item] = desc
 
         def unlock(self):
-            pass
+            self.locked = False
 
         # adds a grabbable item to the room
         # the item is a string (e.g., key)
