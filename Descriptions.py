@@ -42,10 +42,11 @@ life."
 cart = "Looks like there's something under the pile of spare parts."
 spare_parts = "After digging through the pile of junk, you you find a \
 mysterious controller."
+the_white_board = "On the white board you see the numbers 2343 sprawled all over the place."
 
 ##### Andre's Office #####
-desk = "It's cluttered with papers of robot research."
-computer = "Internet Explorer is open to an article entitled 'Robots Gone \
+andres_desk = "It's cluttered with papers of robot research."
+andres_computer = "Internet Explorer is open to an article entitled 'Robots Gone \
 Rouge.' Maybe he was preparing for this. You figure you would prepare for death\
 too if you used Internet Explorer."
 
@@ -59,7 +60,7 @@ desks = "Theres nothing on them."
 chairs = "All pushed in neatly."
 
 ##### Abdoulahi's Office #####
-pictures = "He has lots of family pictures on his desk and even more on the walls."
+abdoulahis_pictures = "Family pictures line the desk and there are even more on the walls."
 
 ##### Class 153 ###
 desks = "Theres nothing on them."
@@ -74,8 +75,8 @@ dirty_sinks = "Have they just not been cleaned or is that all staines?"
 
 
 ##### Gates' Office #####
-books = "Text books and scholarly journals scattered on the bookshelf."
-desk = "There are papers and pens scattered all over the place."
+gates_books = "Text books and scholarly journals scattered on the bookshelf."
+gates_desk = "There are papers and pens scattered all over the place."
 
 ##### Storage 148 ###
 piles_of_junk = "When you move things around it looks like it is just a bunch \
@@ -88,6 +89,10 @@ chairs = "All pushed in neatly."
 ##### Empty Office 143 #####
 walls = "Theres nothing in here but the walls feel like they are closing in."
 
+##### Computer Lab 144 #####
+computers = "All currently off but still warm for being used just earlier."
+chairs = "All pushed in neatly."
+
 ##### The Grid 142 #####
 chained_power_strips = "You are pretty sure this is a fire hazard but nothing \
 has burned down yet so oh well."
@@ -96,8 +101,8 @@ paintings = "There are painting of various things on the walls from tv shows\
  to abstract colors."
 
 ##### Wilkerson's Office ###
-desk = "Not much on it just the desktop and some pens."
-pictures = "Famiy pictures hung on the walls showing how happy they all are."
+wilkersons_desk = "Not much on it just the desktop and some pens."
+wilkersons_pictures = "Famiy pictures hung on the walls showing how happy they all are."
 
 ##### Big Class 140 #####
 desks = "Theres nothing on them."
@@ -109,7 +114,7 @@ of pare parts and wires"
 
 ##### Confrence Room 136 #####
 table = "An oval table to make sure everyone can see eachother."
-chairs = "The comfy rolling kind."
+the_chairs = "The comfy rolling kind."
 
 ##### Faculty Bathroom 134 ###
 toilet_paper = "Kinda damp and you aren't really sure why so best leave it \
@@ -120,7 +125,7 @@ dirty_sinks = "Have they just not been cleaned or is that all staines?"
 cleaning_supplies = "Full of mops and sanitizers."
 
 ##### Waiting Room 127 #####
-chairs = "Empty chairs lining the walls where people sat just earlier today."
+more_chairs = "Empty chairs lining the walls where people sat just earlier today."
 
 ##### Random Office 125 #####
 walls = "Theres nothing in here but the walls feel like they are closing in."
@@ -133,35 +138,34 @@ desks = "Theres nothing on them."
 chairs = "All pushed in neatly."
 
 ##### Turner's Office 121 #####
-desk = "Theres clutter all over it. You woder how any work gets done."
-book_shelves = "Filled to the top with various textbooks."
+turners_desk = "Theres clutter all over it. You woder how any work gets done."
+turners_book_shelves = "Filled to the top with various textbooks."
 
 ##### Class 120 ###
 desks = "Theres nothing on them."
 chairs = "All pushed in neatly."
 
 ##### Choi's Office 119 #####
-desk = "There's lots of academic writings spread out on topjof it."
-couch = "A place for some downtime when the work day gets too hard."
+chois_desk = "There's lots of academic writings spread out on topjof it."
+chois_couch = "A place for some downtime when the work day gets too hard."
 
 ##### Storage 118 #####
 piles_of_junk = "When you move things around it looks like it is just a bunch \
 of pare parts and wires"
 
 ##### Drozdenso's Office 117 #####
-books = "Text books and scholarly journals scattered on the bookshelf."
-desk = "There are papers and pens scattered all over the place."
+drozdensos_books = "Text books and scholarly journals scattered on the bookshelf."
+drozdensos_desk = "There are papers and pens scattered all over the place."
 
 ##### O'Neal's Office 115 #####
-desk = "Theres clutter all over it. You woder how any work gets done."
-book_shelves = "Filled to the top with various textbooks."
+oneals_desk = "Theres clutter all over it. You woder how any work gets done."
+oneals_book_shelves = "Filled to the top with various textbooks."
 
 ##### Office Extension 113 ####
-chairs = "Empty chairs lining the walls where people sat just earlier today."
+lots_of_chairs = "Empty chairs lining the walls where people sat just earlier today."
 
 #### Unoccupied Office 111 ####
 walls = "Theres nothing in here but the walls feel liek they are closing in."
-
 
 ##### Instrument Room 106 #####
 
