@@ -10,6 +10,7 @@ HEIGHT = 960
 
 class Game(Frame):
         robot_currentLoc = None
+        currentLoc = None
         def __init__(self, parent):
                 Frame.__init__(self, parent)
                 # list to keep track of all the rooms
@@ -30,12 +31,12 @@ class Game(Frame):
 
         def createRooms(self):
                 # create the rooms and give them meaningful names
-                exit_1 = Room("Exit 1", "", "")
-                exit_2 = Room("Exit 2", "", "")
-                exit_3 = Room("Exit 3", "", "")
-                exit_4 = Room("Exit 4", "", "")
-                exit_5 = Room("Exit 5", "", "")
-                exit_6 = Room("Exit 6", "", "")
+                exit_1 = Room("Exit 1", "", "", True)
+                exit_2 = Room("Exit 2", "", "", True)
+                exit_3 = Room("Exit 3", "", "", True)
+                exit_4 = Room("Exit 4", "", "", True)
+                exit_5 = Room("Exit 5", "", "", True)
+                exit_6 = Room("Exit 6", "", "", True)
 
                 hallway_1 = Hallway("Hallway 1", 1, "")
                 hallway_1.addExit("exit_4", exit_4)
@@ -69,9 +70,7 @@ class Game(Frame):
                 _158 = Room("Classroom", "158", "", True)
                 _158.addExit("hall", hallway_5)
 
-                _157 = Room("Machine Vision/AI (Robotics Lab)", "157", "roboticslab.gif")
-                _157.addItem("frequency_inhibitor", Descriptions.inhibitor)
-                _157.addGrabbable("frequency_inhibitor")
+                _157 = Room("Machine Vision/AI (Robotics Lab)", "157", "")
                 _157.addExit("hall", hallway_5)
 
                 _156 = Room("Classroom", "156", "")
@@ -99,8 +98,6 @@ class Game(Frame):
                 _148.addExit("hall", hallway_4)
 
                 _147 = Room("Dr. Andrey Timofeyev's Office", "147", "")
-                _147.addItem("key", Descriptions.key)
-                _147.addGrabbable("key")
                 _147.addExit("hall", hallway_4)
 
                 _146 = Room("Classroom", "146" , "", True)
@@ -134,9 +131,10 @@ class Game(Frame):
                 _134.addExit("hall", hallway_3)
 
                 _132 = Room("Janitor" , "132", "", True)
-                _132.addItem("janitor_keys", Descriptions.keys)
-                _132.addGrabbable("janitor_keys")
                 _132.addExit("hall", hallway_3)
+
+                _130 = Room("Bathroom", "130", "")
+                _130.addExit("hall", hallway_3)
 
                 _128 = Room("Bathroom", "128", "")
                 _128.addExit("hall", hallway_3)
@@ -185,8 +183,6 @@ class Game(Frame):
                 _106.addExit("hall", hallway_1)
 
                 _105 = Room("Classroom", "105", "")
-                _105.addItem("sticky_note", Descriptions.note)
-                _105.addGrabbable("sticky_note")
                 _105.addExit("hall", hallway_1)
 
                 _104 = Room("Power System Labs", "104", "")
@@ -227,12 +223,12 @@ class Game(Frame):
 
                 hallway_3.addRoom("127", _127)
                 hallway_3.addRoom("128", _128)
+                hallway_3.addRoom("130", _130)
                 hallway_3.addRoom("132", _132)
                 hallway_3.addRoom("134", _134)
                 hallway_3.addRoom("136", _136)
                 hallway_3.addRoom("138", _138)
                 hallway_3.addRoom("140", _140)
-                hallway_3.addRoom("170", None)
 
                 hallway_4.addRoom("141", _141)
                 hallway_4.addRoom("142", _142)
@@ -254,7 +250,7 @@ class Game(Frame):
                 hallway_5.addRoom("158", _158)
                 hallway_5.addRoom("160", _160)
 
-                Game.currentLoc = _128
+                Game.currentLoc = _157
                 Game.robot_currentLoc = _157
                 Game.inventory = []
 
@@ -290,7 +286,7 @@ class Game(Frame):
                 Game.text.delete("1.0", END)
                 Game.text.insert(END, str(Game.currentLoc))
                 Game.text.insert(END, "\n\nYou are carrying: ")
-                Game.text.insert(END, str(Game.inventory), "sysfix")
+                Game.text.insert(END, str(Game.inventory))
                 Game.text.insert(END, "\n\n" + status)
                 Game.text.config(state=DISABLED)
         
@@ -352,9 +348,12 @@ class Game(Frame):
 
                                 if hasattr(Game.currentLoc, 'rooms'):
                                         if (noun in Game.currentLoc.rooms):
-                                                 Game.currentLoc = Game.currentLoc.rooms[noun]
+                                                if not Game.currentLoc.rooms.get(noun).locked:
+                                                        Game.currentLoc = Game.currentLoc.rooms[noun]
 
-                                                 response = "Room changed."
+                                                        response = "Room changed."
+                                                else:
+                                                      response = "Room locked."  
 
                                 if hasattr(Game.currentLoc, 'hallways'):
                                         if (noun in Game.currentLoc.hallways):
