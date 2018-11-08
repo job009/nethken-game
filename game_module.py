@@ -135,7 +135,7 @@ class Game(Frame):
 
                 _132 = Room("Janitor" , "132", "", True)
                 _132.addItem("janitor_keys", Descriptions.keys)
-                _132.addGrabbable("janitors_keys")
+                _132.addGrabbable("janitor_keys")
                 _132.addExit("hall", hallway_3)
 
                 _128 = Room("Bathroom", "128", "")
