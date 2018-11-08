@@ -5,26 +5,33 @@
 #################################################################
 
 from Tkinter import *
+import RPi.GPIO as GPIO
 from game_module import Game
 from robot_module import run
+from breadboard import led_checks
 from config import *
-import threading
+from threading import Thread
 
 
-def background():
+def background_1():
     run()
+
+def background_2():
+    led_checks()
 
 def foreground():
     window = Tk()
     window.title("Robot Ravage")
-    window.iconbitmap('icon.ico')
     g = Game(window)
     g.play()
 
     window.mainloop()
 
-b = threading.Thread(name='background', target=background)
-f = threading.Thread(name='foreground', target=foreground)
 
-b.start()
+b1 = Thread(name='background_1', target=background_1)
+b2 = Thread(name='background_2', target=background_2)
+f = Thread(name='foreground', target=foreground)
+
+b1.start()
+b2.start()
 f.start()
