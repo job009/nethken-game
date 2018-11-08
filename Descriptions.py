@@ -210,7 +210,6 @@ tennis_shoes = "A nice pair of running shoes. They are much lighter and more fle
 book = "A very heavy encyclopedia."
 
 ##### Master bedroom #####
-key = "There is a key on the bedside table, can it open the front door?"
 hair_tie = "Your hair is so long you need it to watch your step better."
 
 
