@@ -82,6 +82,10 @@ gates_desk = "There are papers and pens scattered all over the place."
 piles_of_junk = "When you move things around it looks like it is just a bunch \
 of pare parts and wires"
 
+#####147 Aundreys office###
+key = "Key on desk labeled 'work room'"
+
+
 ##### Class 145 #####
 desks = "Theres nothing on them."
 chairs = "All pushed in neatly."
@@ -123,6 +127,7 @@ dirty_sinks = "Have they just not been cleaned or is that all staines?"
 
 ##### Janitor Closet 132 #####
 cleaning_supplies = "Full of mops and sanitizers."
+keys = "the janitor left his keys, what door does it go too?"
 
 ##### Waiting Room 127 #####
 more_chairs = "Empty chairs lining the walls where people sat just earlier today."
@@ -169,6 +174,8 @@ walls = "Theres nothing in here but the walls feel liek they are closing in."
 
 ##### Instrument Room 106 #####
 
+#####105 classroom#########
+note = "note in Andrey's pocket,1.work on project(get key to room in office first)\n2.pickup dry cleaning\n3.grab milk on the way home"
 
 ##### Power Systems Lab #####
 
@@ -184,6 +191,9 @@ walls = "Theres nothing in here but the walls feel liek they are closing in."
 
 ##### Power Systems Lab ###
 
+
+#####157 Robotics Lab##########
+inhibitor = "covered by papers on desk, labled 'frequency controller'"
 
 ################## Grabbable Descriptions ####################
 # These should also be grouped by what room they are in
