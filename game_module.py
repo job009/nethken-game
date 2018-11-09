@@ -70,7 +70,9 @@ class Game(Frame):
                 _158 = Room("Classroom", "158", "", True)
                 _158.addExit("hall", hallway_5)
 
-                _157 = Room("Machine Vision/AI (Robotics Lab)", "157", "")
+                _157 = Room("Machine Vision/AI (Robotics Lab)", "157", "", True)
+                _157.addItem("frequency_inhibitor", Descriptions.inhibitor)
+                _157.addGrabbable("frequency_inhibitor")
                 _157.addExit("hall", hallway_5)
 
                 _156 = Room("Classroom", "156", "")
@@ -98,6 +100,8 @@ class Game(Frame):
                 _148.addExit("hall", hallway_4)
 
                 _147 = Room("Dr. Andrey Timofeyev's Office", "147", "")
+                _147.addItem("key", Descriptions.key)
+                _147.addGrabbable("key")
                 _147.addExit("hall", hallway_4)
 
                 _146 = Room("Classroom", "146" , "", True)
@@ -131,6 +135,8 @@ class Game(Frame):
                 _134.addExit("hall", hallway_3)
 
                 _132 = Room("Janitor" , "132", "", True)
+                _132.addItem("janitor_keys", Descriptions.keys)
+                _132.addGrabbable("janitor_keys")
                 _132.addExit("hall", hallway_3)
 
                 _130 = Room("Bathroom", "130", "")
@@ -183,6 +189,8 @@ class Game(Frame):
                 _106.addExit("hall", hallway_1)
 
                 _105 = Room("Classroom", "105", "")
+                _105.addItem("sticky_note", Descriptions.note)
+                _105.addGrabbable("sticky_note")
                 _105.addExit("hall", hallway_1)
 
                 _104 = Room("Power System Labs", "104", "")
@@ -199,6 +207,7 @@ class Game(Frame):
 
                 _100 = Room("Power Systems Lab", "100", "")
                 _100.addExit("hall", hallway_1)
+
 
 
                 hallway_1.addRoom("100", _100)
