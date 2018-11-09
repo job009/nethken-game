@@ -1,3 +1,13 @@
+def typeit(widget, index, string):
+        if len(string) > 0:
+                widget.insert(index, string[0])
+                if len(string) > 1:
+                        # compute index of next char
+                        index = widget.index("%s + 1 char" % index)
+
+                        # type the next character in half a second
+                        widget.after(100, typeit, widget, index, string[1:])
+
 class Grabbables(object):
         # grabbables are items that can be added to the players inventory
         # they will have a name a description and attribute modifiers
@@ -118,9 +128,6 @@ class Room(object):
         def addItem(self, item, desc):
             # append the item and description to the appropriate dictionary
             self._items[item] = desc
-
-        def unlock(self):
-            self.locked = False
 
         # adds a grabbable item to the room
         # the item is a string (e.g., key)
