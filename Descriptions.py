@@ -52,6 +52,14 @@ Rouge.' Maybe he was preparing for this. You figure you would prepare for death\
 too if you used Internet Explorer."
 key = "Key on desk labeled 'work room'"
 
+##### Class 160 #####
+desks = "Theres nothing on them."
+chairs = "All pushed in neatly."
+
+##### Class 158 #####
+desks = "Theres nothing on them."
+chairs = "All pushed in neatly."
+
 ##### Robotics Lab 157 #####
 spare_parts = "Screws and wheeles cover the floors. Be careful to watch your\
 step; you don't want to make any loud noises."
@@ -128,6 +136,11 @@ dirty_sinks = "Have they just not been cleaned or is that all staines?"
 ##### Janitor Closet 132 #####
 cleaning_supplies = "Full of mops and sanitizers."
 keys = "the janitor left his keys, what door does it go too?"
+
+##### Bathroom 130 #####
+toilet_paper = "Kinda damp and you aren't really sure why so best leave it \
+alone."
+dirty_sinks = "Have they just not been cleaned or is that all staines?"
 
 ##### Waiting Room 127 #####
 more_chairs = "Empty chairs lining the walls where people sat just earlier today."
