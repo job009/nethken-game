@@ -43,24 +43,27 @@ cart = "Looks like there's something under the pile of spare parts."
 spare_parts = "After digging through the pile of junk, you you find a \
 mysterious controller."
 the_white_board = "On the white board you see the numbers 2343 sprawled all over the place."
+note = "note in Andrey's pocket,1.work on project(get key to room in office first)\n2.pickup dry cleaning\n3.grab milk on the way home"
 
 ##### Andre's Office #####
 andres_desk = "It's cluttered with papers of robot research."
 andres_computer = "Internet Explorer is open to an article entitled 'Robots Gone \
 Rouge.' Maybe he was preparing for this. You figure you would prepare for death\
 too if you used Internet Explorer."
+key = "Key on desk labeled 'work room'"
 
 ##### Robotics Lab 157 #####
 spare_parts = "Screws and wheeles cover the floors. Be careful to watch your\
 step; you don't want to make any loud noises."
 white_board = "Hanging on the wall, the board reads 'Beep boop boop beeeeeeep.'"
+inhibitor = "covered by papers on desk, labled 'frequency controller'"
 
 ##### Class 156 #####
 desks = "Theres nothing on them."
 chairs = "All pushed in neatly."
 
 ##### Abdoulahi's Office #####
-abdoulahis_pictures = "Family pictures line the desk and there are even more on the walls."
+pictures = "Family pictures line the desk and there are even more on the walls."
 
 ##### Class 153 ###
 desks = "Theres nothing on them."
@@ -72,7 +75,8 @@ alone."
 dirty_sinks = "Have they just not been cleaned or is that all staines?"
 
 ##### Optoelectronics Lab #####
-
+desks = "Theres nothing on them."
+chairs = "All pushed in neatly."
 
 ##### Gates' Office #####
 gates_books = "Text books and scholarly journals scattered on the bookshelf."
@@ -81,10 +85,6 @@ gates_desk = "There are papers and pens scattered all over the place."
 ##### Storage 148 ###
 piles_of_junk = "When you move things around it looks like it is just a bunch \
 of pare parts and wires"
-
-#####147 Aundreys office###
-key = "Key on desk labeled 'work room'"
-
 
 ##### Class 145 #####
 desks = "Theres nothing on them."
@@ -106,7 +106,7 @@ paintings = "There are painting of various things on the walls from tv shows\
 
 ##### Wilkerson's Office ###
 wilkersons_desk = "Not much on it just the desktop and some pens."
-wilkersons_pictures = "Famiy pictures hung on the walls showing how happy they all are."
+wilkersons_pictures = "Family pictures line the desk and there are even more on the walls."
 
 ##### Big Class 140 #####
 desks = "Theres nothing on them."
@@ -173,27 +173,27 @@ lots_of_chairs = "Empty chairs lining the walls where people sat just earlier to
 walls = "Theres nothing in here but the walls feel liek they are closing in."
 
 ##### Instrument Room 106 #####
-
-#####105 classroom#########
-note = "note in Andrey's pocket,1.work on project(get key to room in office first)\n2.pickup dry cleaning\n3.grab milk on the way home"
+desks = "Theres nothing on them."
+chairs = "All pushed in neatly."
 
 ##### Power Systems Lab #####
-
+piles_of_junk = "When you move things around it looks like it is just a bunch \
+of pare parts and wires"
 
 ##### Machinery Class 103 #####
-
+big_machines = "Suddenly you are happy you only have this robot chasing you\
+instead of all this machinery."
 
 ##### Electrical Distibution 102 #####
-
+fuses = "You look in the fuse box and realize you have no clue what fuse\
+is for what."
 
 ##### Data Mining Lab #####
-
+computers = "All currently off but still warm for being used just earlier."
 
 ##### Power Systems Lab ###
-
-
-#####157 Robotics Lab##########
-inhibitor = "covered by papers on desk, labled 'frequency controller'"
+piles_of_junk = "When you move things around it looks like it is just a bunch \
+of pare parts and wires"
 
 ################## Grabbable Descriptions ####################
 # These should also be grouped by what room they are in
