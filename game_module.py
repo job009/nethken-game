@@ -134,12 +134,12 @@ class Game(Frame):
                 _134 = Room("Faculty Bathroom", "134", "")
                 _134.addExit("hall", hallway_3)
 
-                _132 = Room("Janitor" , "132", "", True)
-                _132.addItem("janitor_keys", Descriptions.keys)
-                _132.addGrabbable("janitor_keys")
+                _132 = Room("Bathroom", "132", "")
                 _132.addExit("hall", hallway_3)
 
-                _130 = Room("Bathroom", "130", "")
+                _130 = Room("Janitor" , "130", "", False)
+                _130.addItem("janitor_keys", Descriptions.keys)
+                _130.addGrabbable("janitor_keys")
                 _130.addExit("hall", hallway_3)
 
                 _128 = Room("Bathroom", "128", "")
@@ -183,7 +183,7 @@ class Game(Frame):
                 _111 = Room("Unoccupied Office", "111", "", True)
                 _111.addExit("hall", hallway_2)
 
-                _107 = None
+                _107 = Room("Secret Torture Room", "107", "", True)
 
                 _106 = Room("Instrument Room", "106", "")
                 _106.addExit("hall", hallway_1)
@@ -207,7 +207,6 @@ class Game(Frame):
 
                 _100 = Room("Power Systems Lab", "100", "")
                 _100.addExit("hall", hallway_1)
-
 
 
                 hallway_1.addRoom("100", _100)
@@ -259,7 +258,7 @@ class Game(Frame):
                 hallway_5.addRoom("158", _158)
                 hallway_5.addRoom("160", _160)
 
-                Game.currentLoc = _157
+                Game.currentLoc = _128
                 Game.robot_currentLoc = _157
                 Game.inventory = []
 
@@ -289,14 +288,17 @@ class Game(Frame):
                 Game.image.config(image=Game.img)
                 Game.image.image = Game.img
 
+        
+
         def setStatus(self, status):
                 global character
                 Game.text.config(state=NORMAL)
                 Game.text.delete("1.0", END)
                 Game.text.insert(END, str(Game.currentLoc))
                 Game.text.insert(END, "\n\nYou are carrying: ")
-                Game.text.insert(END, str(Game.inventory))
-                Game.text.insert(END, "\n\n" + status)
+                Game.text.insert(END, str(Game.inventory) + "\n\n")
+                Game.text.insert(END, status)
+                #typeit(Game.text, END, str(status))
                 Game.text.config(state=DISABLED)
         
                       
@@ -325,6 +327,8 @@ class Game(Frame):
             Game.setStatus("You are carrying: ")
             '''
 
+
+
         def process(self, event):
                 # check to see if the player has won or lost first
                 if (self.victory == True or self.death == True):
@@ -348,12 +352,15 @@ class Game(Frame):
                         noun = words[1]
 
                         if (verb == "go"):
-                                response = "Invalid input."
+                                response = "Invalid input. Please provide a valid exit, room, or hallway."
                                 if hasattr(Game.currentLoc, 'exits'):
                                         if (noun in Game.currentLoc.exits):
-                                                Game.currentLoc = Game.currentLoc.exits[noun]
+                                                if not Game.currentLoc.exits.get(noun).locked:
+                                                        Game.currentLoc = Game.currentLoc.exits[noun]
 
-                                                response = "Exited."
+                                                        response = "Exited."
+                                                else:
+                                                      response = "{} is locked.".format(Game.currentLoc.exits.get(noun).name)   
 
                                 if hasattr(Game.currentLoc, 'rooms'):
                                         if (noun in Game.currentLoc.rooms):
@@ -361,8 +368,19 @@ class Game(Frame):
                                                         Game.currentLoc = Game.currentLoc.rooms[noun]
 
                                                         response = "Room changed."
+                                                        
+                                                elif "key" in Game.inventory:
+                                                        if Game.currentLoc.rooms[noun].number == "157":
+                                                                Game.currentLoc = Game.currentLoc.rooms[noun]
+                                                                response = "The key unlocked the door. Room changed."
+
+                                                elif "janitor_keys" in Game.inventory:
+                                                        if Game.currentLoc.rooms[noun].name == "Exit 6":
+                                                                Game.currentLoc = Game.currentLoc.rooms[noun]
+                                                                response = "The key unlocked the door. Room changed."
+
                                                 else:
-                                                      response = "Room locked."  
+                                                        response = "{} is locked.".format(Game.currentLoc.rooms.get(noun).name)
 
                                 if hasattr(Game.currentLoc, 'hallways'):
                                         if (noun in Game.currentLoc.hallways):
@@ -371,13 +389,13 @@ class Game(Frame):
                                                 response = "Hallway changed."
 
                         elif (verb == "look"):
-                                response = "I don't see that item."
+                                response = "Item not found."
 
                                 if (noun in Game.currentLoc.items):
                                         response = Game.currentLoc.items[noun]
 
                         elif (verb == "take"):
-                                response = "I don't see that item."
+                                response = "Item not found."
 
                                 for grabbable in Game.currentLoc.grabbables:
                                         if (noun == grabbable):
@@ -387,7 +405,7 @@ class Game(Frame):
                                                 break
 
                         elif (verb == "equip"):
-                                response = "You cannot equip that"
+                                response = "You cannot equip that."
                                 for item in Game.inventory:
                                         for i in range(len(self.grabbables)):
                                                 # find the matching inventory name in list of
@@ -403,6 +421,12 @@ class Game(Frame):
                                                                 # be equipped again to raise stats
                                                                 del self.grabbables[i]
                                                                 break
+                        elif (verb == "about"):
+                                response = ""
+                                if hasattr(Game.currentLoc, 'rooms'):
+                                       if noun == "all":
+                                               for key, value in Game.currentLoc.rooms.iteritems():
+                                                       response += key + "\t" + value.name + "\n"
 
 
                 self.setStatus(response)
