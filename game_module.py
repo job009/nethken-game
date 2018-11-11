@@ -111,9 +111,12 @@ class Game(Frame):
 
                 _149 = Room("Dr. Miguel Gates' Office", "149", "")
                 _149.addExit("hall", hallway_4)
+                _149.addItem("gates_desk", Descriptions.gates_desk)
+                _149.addItem("gates_books", Descriptions.gates_books)
 
                 _148 = Room("Storage", "148" , "")
                 _148.addExit("hall", hallway_4)
+                _148.addItem("piles_of_junk", Descriptions.piles_of_junk)
 
                 _147 = Room("Dr. Andrey Timofeyev's Office", "147", "")
                 _147.addItem("key", Descriptions.key)
@@ -124,39 +127,61 @@ class Game(Frame):
 
                 _146 = Room("Classroom", "146" , "", True)
                 _146.addExit("hall", hallway_4)
+                _146.addItem("desks", Descriptions.desks)
+                _146.addItem("chairs", Descriptions.chairs)
 
                 _145 = Room("Classroom", "145", "")
                 _145.addExit("hall", hallway_4)
+                _145.addItem("desks", Descriptions.desks)
+                _145.addItem("chairs", Descriptions.chairs)
 
                 _144 = Room("Computer Lab", "144", "")
                 _144.addExit("hall", hallway_4)
+                _144.addItem("computers", Descriptions.computers)
+                _144.addItem("chairs", Descriptions.chairs)
 
                 _143 = Room("Unoccupied Office", "143", "", True)
                 _143.addExit("hall", hallway_4)
+                _143.addItem("walls", Descriptions.walls)
 
                 _142 = Room("The Grid", "142", "")
                 _142.addExit("hall", hallway_4)
+                _142.addItem("chained_power_strips", Descriptions.chained_power_strips)
+                _142.addItem("couches", Descriptions.couches)
+                _142.addItem("paintintgs", Descriptions.paintings)
 
                 _141 = Room("Charlotte Wilkerson's Office", "141", "")
                 _141.addExit("hall", hallway_4)
+                _141.addItem("wilkersons_desk", Descriptions.wilkersons_desk)
+                _141.addItem("wilkersons_pictures", Descriptions.wilkersons_pictures)
 
                 _140 = Room("Big Classroom", "140", "")
                 _140.addExit("hall", hallway_3)
+                _140.addItem("desks", Descriptions.desks)
+                _140.addItem("chairs", Descriptions.chairs)
 
                 _138 = Room("Storage", "138", "", True)
                 _138.addExit("hall", hallway_3)
+                _138.addItem("piles_of_junk", Descriptions.piles_of_junk)
 
                 _136 = Room("Conference Room", "136", "")
                 _136.addExit("hall", hallway_3)
+                _136.addItem("table", Descriptions.table)
+                _136.addItem("the_chairs", Descriptions.the_chairs)
 
                 _134 = Room("Faculty Bathroom", "134", "")
                 _134.addExit("hall", hallway_3)
+                _134.addItem("toilet_paper", Descriptions.toilet_paper)
+                _134.addItem("dirty_sinks", Descriptions.dirty_sinks)
 
                 _132 = Room("Bathroom", "132", "")
                 _132.addExit("hall", hallway_3)
+                _132.addItem("toilet_paper", Descriptions.toilet_paper)
+                _132.addItem("dirty_sinks", Descriptions.dirty_sinks)
 
                 _130 = Room("Janitor" , "130", "", False)
                 _130.addItem("janitor_keys", Descriptions.keys)
+                _130.addItem("cleaning_supplies", Descriptions.cleaning_supplies)
                 _130.addGrabbable("janitor_keys")
                 _130.addExit("hall", hallway_3)
 
@@ -169,44 +194,64 @@ class Game(Frame):
 
                 _127 = Room("Dean Waiting Room", "127", "")
                 _127.addExit("hall", hallway_2)
+                _127.addItem("more_chairs", Descriptions.more_chairs)
 
                 _125 = Room("Office", "125", "", True)
                 _125.addExit("hall", hallway_2)
+                _125.addItem("walls", Descriptions.walls)
 
                 _123 = Room("Office", "123", "")
                 _123.addExit("hall", hallway_2)
+                _123.addItem("walls", Descriptions.walls)
 
                 _122 = Room("Classroom", "122", "")
                 _122.addExit("hall", hallway_2)
+                _122.addItem("desks", Descriptions.desks)
+                _122.addItem("chairs", Descriptions.chairs)
 
                 _121 = Room("Dr. Galen E. Turner's Office", "121", "", True)
                 _121.addExit("hall", hallway_2)
+                _121.addItem("turners_desk", Descriptions.turners_desk)
+                _121.addItem("turners_book_shelves", Descriptions.turners_book_shelves)
 
                 _120 = Room("Classroom", "120", "")
                 _120.addExit("hall", hallway_2)
+                _120.addItem("desks", Descriptions.desks)
+                _120.addItem("chairs", Descriptions.chairs)
 
                 _119 = Room("Dr. Ben Choi's Office", "119", "")
                 _119.addExit("hall", hallway_2)
+                _119.addItem("chois_desk", Descriptions.chois_desk)
+                _119.addItem("chois_couch", Descriptions.chois_couch)
 
                 _118 = Room("Storage", "118", "")
                 _118.addExit("hall", hallway_2)
+                _118.addItem("piles_of_junk", Descriptions.piles_of_junk)
 
                 _117 = Room("Dr. Ben Drozdenso's Office", "117", "")
                 _117.addExit("hall", hallway_2)
+                _117.addItem("drozdensos_books", Descriptions.drozdensons_books)
+                _117.addItem("drozdensos_desk", Descriptions.drozdensos_desk)
 
                 _115 = Room("Dr. Michael O'Neal's Office", "115", "")
                 _115.addExit("hall", hallway_2)
+                _115.addItem("oneals_desk", Descriptions.oneals_desk)
+                _115.addItem("oneals_book_shelves", Descriptions.oneals_book_shelves)
 
                 _113 = Room("Office Extension", "113", "")
                 _113.addExit("hall", hallway_2)
+                _113.addItem("lots_of_chairs", Descriptions.lots_of_chairs)
 
                 _111 = Room("Unoccupied Office", "111", "", True)
                 _111.addExit("hall", hallway_2)
+                _111.addItem("walls", Descriptions.walls)
 
                 _107 = Room("Secret Torture Room", "107", "", True)
 
                 _106 = Room("Instrument Room", "106", "")
                 _106.addExit("hall", hallway_1)
+                _106.addItem("desks", Descriptions.desks)
+                _106.addItem("chairs", Descriptions.chairs)
 
                 _105 = Room("Classroom", "105", "")
                 _105.addItem("andre", Descriptions.andre)
@@ -219,18 +264,23 @@ class Game(Frame):
 
                 _104 = Room("Power System Labs", "104", "")
                 _104.addExit("hall", hallway_1)
+                _104.addItem("piles_of_junk", Descriptions.piles_of_junk)
 
                 _103 = Room("Machinary Classroom", "103", "")
                 _103.addExit("hall", hallway_1)
+                _103.addItem("big_machines", Descriptions.big_machines)
 
                 _102 = Room("Electrical Distribution", "102", "")
                 _102.addExit("hall", hallway_1)
+                _102.addItem("fuses", Descriptions.fuses)
 
                 _101 = Room("Data Mining Lab", "101", "")
                 _101.addExit("hall", hallway_1)
+                _101.addItem("computers", Descriptions.computers)
 
                 _100 = Room("Power Systems Lab", "100", "")
                 _100.addExit("hall", hallway_1)
+                _100.addItem("piles_of_junk", Decriptions.piles_of_junk)
 
 
                 hallway_1.addRoom("100", _100)
