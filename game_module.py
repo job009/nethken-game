@@ -39,19 +39,26 @@ class Game(Frame):
                 exit_6 = Room("Exit 6", "", "", True)
 
                 hallway_1 = Hallway("Hallway 1", 1, "")
+                hallway_1.addItem("empty_chairs", Descriptions.empty_chairs)
+                hallway_1.addItem("pictures", Descriptions.pictures)
                 hallway_1.addExit("exit_4", exit_4)
 
                 hallway_2 = Hallway("Hallway 2", 2, "")
+                hallway_2.addItem("empty_chairs", Descriptions.empty_chairs)
+                hallway_2.addItem("fire_alarm", Descriptions.fire_alarm)
                 hallway_2.addExit("exit_3", exit_3)
 
                 hallway_3 = Hallway("Hallway 3", 3, "")
+                hallway_3.addItem("empty_chairs", Descriptions.empty_chairs)
                 hallway_3.addExit("exit_1", exit_1)
                 hallway_3.addExit("exit_2", exit_2)
 
                 hallway_4 = Hallway("Hallway 4", 4, "")
+                hallway_4.addItem("empty_chairs", Descriptions.empty_chairs)
                 hallway_4.addExit("exit_5", exit_5)
 
                 hallway_5 = Hallway("Hallway 5", 5, "")
+                hallway_5.addItem("empty_chairs", Descriptions.empty_chairs)
                 hallway_5.addExit("exit_6", exit_6)
 
                 hallway_1.addHallway("hallway_2", hallway_2)
@@ -65,6 +72,8 @@ class Game(Frame):
 
 
                 _160 = Room("Classroom", "160", "", True)
+                _160.addItem("desks", Descriptions.desks)
+                _160.addItem("chairs", Descriptions.chairs)
                 _160.addExit("hall", hallway_5)
 
                 _158 = Room("Classroom", "158", "", True)
@@ -79,18 +88,25 @@ class Game(Frame):
                 _156.addExit("hall", hallway_5)
 
                 _155 = Room("Dr. Ibrahim Abdoulahi's Office", "155", "")
+                _155.addItem("pictures", Descriptions.pictures)
                 _155.addExit("hall", hallway_5)
 
                 _154 = Room("Classroom", "149", "", True)
                 _154.addExit("hall", hallway_5)
 
                 _153 = Room("Classroom", "153", "")
+                _153.addItem("desks", Descriptions.desks)
+                _153.addItem("chairs", Descriptions.chairs)
                 _153.addExit("hall", hallway_5)
 
                 _152 = Room("Bathroom", "152", "")
+                _152.addItem("toilet_paper", Descriptions.toilet_paper)
+                _152.addItem("dirty_sinks", Descriptions.dirty_sinks)
                 _152.addExit("hall", hallway_5)
 
                 _151 = Room("Optoelectronics Lab", "151", "")
+                _151.addItem("desks", Descriptions.desks)
+                _151.addItem("chairs", Descriptions.chairs)
                 _151.addExit("hall", hallway_4)
 
                 _149 = Room("Dr. Miguel Gates' Office", "149", "")
@@ -101,6 +117,8 @@ class Game(Frame):
 
                 _147 = Room("Dr. Andrey Timofeyev's Office", "147", "")
                 _147.addItem("key", Descriptions.key)
+                _147.addItem("andres_desk", Descriptions.andres_desk)
+                _147.addItem("andres_computer ", Descriptions.andres_computer)
                 _147.addGrabbable("key")
                 _147.addExit("hall", hallway_4)
 
@@ -143,9 +161,11 @@ class Game(Frame):
                 _130.addExit("hall", hallway_3)
 
                 _128 = Room("Bathroom", "128", "")
-                _128.addExit("hall", hallway_3)
+                _128.addItem("writing_on_the_walls", Descriptions.writing_on_the_walls)
+                _128.addItem("vacant_stall", Descriptions.vacant_stall)
                 _128.addItem("toilet_paper", "")
                 _128.addGrabbable("toilet_paper")
+                _128.addExit("hall", hallway_3)
 
                 _127 = Room("Dean Waiting Room", "127", "")
                 _127.addExit("hall", hallway_2)
@@ -189,6 +209,10 @@ class Game(Frame):
                 _106.addExit("hall", hallway_1)
 
                 _105 = Room("Classroom", "105", "")
+                _105.addItem("andre", Descriptions.andre)
+                _105.addItem("cart", Descriptions.cart)
+                _105.addItem("spare_parts", Descriptions.spare_parts)
+                _105.addItem("the_white_board", Descriptions.the_white_board)
                 _105.addItem("sticky_note", Descriptions.note)
                 _105.addGrabbable("sticky_note")
                 _105.addExit("hall", hallway_1)
@@ -258,6 +282,7 @@ class Game(Frame):
                 hallway_5.addRoom("158", _158)
                 hallway_5.addRoom("160", _160)
 
+ 
                 Game.currentLoc = _128
                 Game.robot_currentLoc = _157
                 Game.inventory = []
