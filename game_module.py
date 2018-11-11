@@ -450,10 +450,10 @@ class Game(Frame):
                                                                 Game.currentLoc = Game.currentLoc.rooms[noun]
                                                                 response = "The key unlocked the door. Room changed."
 
-                                                elif "janitor_keys" in Game.inventory:
-                                                        if Game.currentLoc.rooms[noun].name == "Exit 6":
-                                                                Game.currentLoc = Game.currentLoc.rooms[noun]
-                                                                response = "The key unlocked the door. Room changed."
+#                                                 elif "janitor_keys" in Game.inventory:
+#                                                         if Game.currentLoc.rooms[noun].name == "Exit 6":
+#                                                                 Game.currentLoc = Game.currentLoc.rooms[noun]
+#                                                                 response = "The key unlocked the door. Room changed."
 
                                                 else:
                                                         response = "{} is locked.".format(Game.currentLoc.rooms.get(noun).name)
