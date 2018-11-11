@@ -172,7 +172,8 @@ class Game(Frame):
                 _134 = Room("Faculty Bathroom", "134", "")
                 _134.addExit("hall", hallway_3)
                 _134.addItem("toilet_paper", Descriptions.toilet_paper)
-                _134.addItem("dirty_sinks", Descriptions.dirty_sinks)
+                _134.addItem("dirty_sink", Descriptions.dirty_sink)
+                _134.addGrabbable("dirty_sink")
 
                 _132 = Room("Bathroom", "132", "")
                 _132.addExit("hall", hallway_3)
