@@ -230,7 +230,7 @@ class Game(Frame):
 
                 _117 = Room("Dr. Ben Drozdenso's Office", "117", "")
                 _117.addExit("hall", hallway_2)
-                _117.addItem("drozdensos_books", Descriptions.drozdensons_books)
+                _117.addItem("drozdensos_books", Descriptions.drozdensos_books)
                 _117.addItem("drozdensos_desk", Descriptions.drozdensos_desk)
 
                 _115 = Room("Dr. Michael O'Neal's Office", "115", "")
@@ -280,7 +280,7 @@ class Game(Frame):
 
                 _100 = Room("Power Systems Lab", "100", "")
                 _100.addExit("hall", hallway_1)
-                _100.addItem("piles_of_junk", Decriptions.piles_of_junk)
+                _100.addItem("piles_of_junk", Descriptions.piles_of_junk)
 
 
                 hallway_1.addRoom("100", _100)
