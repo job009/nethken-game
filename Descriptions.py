@@ -131,7 +131,7 @@ the_chairs = "The comfy rolling kind."
 ##### Faculty Bathroom 134 ###
 toilet_paper = "Kinda damp and you aren't really sure why so best leave it \
 alone."
-dirty_sinks = "Have they just not been cleaned or is that all staines?"
+dirty_sink = "Have they just not been cleaned or is that all staines?"
 
 ##### Janitor Closet 132 #####
 cleaning_supplies = "Full of mops and sanitizers."
