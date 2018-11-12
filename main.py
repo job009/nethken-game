@@ -1,30 +1,28 @@
 #################################################################
 # Name: JonMichael Book, Logan Simmons, Elise Deimel
 # Date: 2018-10-##
-# Description: (Name of Project Here)
+# Description: Robot Ravage
 #################################################################
 
 from Tkinter import *
 import RPi.GPIO as GPIO
 from game_module import Game
 from robot_module import run
-from breadboard import led_checks
+from breadboard import ledChecks
 from config import *
-from threading import Thread
-
+from threading import Thread 
 
 def background_1():
     run()
 
 def background_2():
-    led_checks()
+    ledChecks()
 
 def foreground():
     window = Tk()
     window.title("Robot Ravage")
     g = Game(window)
     g.play()
-
     window.mainloop()
 
 

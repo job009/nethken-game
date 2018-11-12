@@ -5,8 +5,8 @@ from time import sleep
 import Descriptions
 import Events
 
-WIDTH = 720
-HEIGHT = 960
+WIDTH = 1280
+HEIGHT = 720
 
 class Game(Frame):
         robot_currentLoc = None
@@ -31,33 +31,33 @@ class Game(Frame):
 
         def createRooms(self):
                 # create the rooms and give them meaningful names
-                exit_1 = Room("Exit 1", "", "", True)
-                exit_2 = Room("Exit 2", "", "", True)
-                exit_3 = Room("Exit 3", "", "", True)
-                exit_4 = Room("Exit 4", "", "", True)
-                exit_5 = Room("Exit 5", "", "", True)
-                exit_6 = Room("Exit 6", "", "", True)
+                exit_1 = Room("Exit 1", "1", "", True)
+                exit_2 = Room("Exit 2", "2", "", True)
+                exit_3 = Room("Exit 3", "3", "", True)
+                exit_4 = Room("Exit 4", "4", "", True)
+                exit_5 = Room("Exit 5", "5", "", True)
+                exit_6 = Room("Exit 6", "6", "", True)
 
-                hallway_1 = Hallway("Hallway 1", 1, "")
+                hallway_1 = Hallway("Hallway 1", "107", "gifs/hallway1.gif")
                 hallway_1.addItem("empty_chairs", Descriptions.empty_chairs)
                 hallway_1.addItem("pictures", Descriptions.pictures)
                 hallway_1.addExit("exit_4", exit_4)
 
-                hallway_2 = Hallway("Hallway 2", 2, "")
+                hallway_2 = Hallway("Hallway 2", "112", "gifs/hallway2.gif")
                 hallway_2.addItem("empty_chairs", Descriptions.empty_chairs)
                 hallway_2.addItem("fire_alarm", Descriptions.fire_alarm)
                 hallway_2.addExit("exit_3", exit_3)
 
-                hallway_3 = Hallway("Hallway 3", 3, "")
+                hallway_3 = Hallway("Hallway 3", "131", "gifs/hallway3.gif")
                 hallway_3.addItem("empty_chairs", Descriptions.empty_chairs)
                 hallway_3.addExit("exit_1", exit_1)
                 hallway_3.addExit("exit_2", exit_2)
 
-                hallway_4 = Hallway("Hallway 4", 4, "")
+                hallway_4 = Hallway("Hallway 4", "150", "gifs/hallway4.gif")
                 hallway_4.addItem("empty_chairs", Descriptions.empty_chairs)
                 hallway_4.addExit("exit_5", exit_5)
 
-                hallway_5 = Hallway("Hallway 5", 5, "")
+                hallway_5 = Hallway("Hallway 5", "161", "gifs/hallway5.gif")
                 hallway_5.addItem("empty_chairs", Descriptions.empty_chairs)
                 hallway_5.addExit("exit_6", exit_6)
 
@@ -71,191 +71,191 @@ class Game(Frame):
                 hallway_5.addHallway("hallway_4", hallway_4)
 
 
-                _160 = Room("Classroom", "160", "", True)
+                _160 = Room("Classroom", "160", "gifs/160.gif", True)
                 _160.addItem("desks", Descriptions.desks)
                 _160.addItem("chairs", Descriptions.chairs)
                 _160.addExit("hall", hallway_5)
 
-                _158 = Room("Classroom", "158", "", True)
+                _158 = Room("Classroom", "158", "gifs/158.gif", True)
                 _158.addExit("hall", hallway_5)
 
-                _157 = Room("Machine Vision/AI (Robotics Lab)", "157", "", True)
+                _157 = Room("Machine Vision/AI (Robotics Lab)", "157", "gifs/157.gif", True)
                 _157.addItem("frequency_inhibitor", Descriptions.inhibitor)
                 _157.addGrabbable("frequency_inhibitor")
                 _157.addExit("hall", hallway_5)
 
-                _156 = Room("Classroom", "156", "")
+                _156 = Room("Classroom", "156", "gifs/156.gif")
                 _156.addExit("hall", hallway_5)
 
-                _155 = Room("Dr. Ibrahim Abdoulahi's Office", "155", "")
+                _155 = Room("Dr. Ibrahim Abdoulahi's Office", "155", "gifs/155.gif")
                 _155.addItem("pictures", Descriptions.pictures)
                 _155.addExit("hall", hallway_5)
 
-                _154 = Room("Classroom", "149", "", True)
+                _154 = Room("Classroom", "149", "gifs/149.gif", True)
                 _154.addExit("hall", hallway_5)
 
-                _153 = Room("Classroom", "153", "")
+                _153 = Room("Classroom", "153", "gifs/153.gif")
                 _153.addItem("desks", Descriptions.desks)
                 _153.addItem("chairs", Descriptions.chairs)
                 _153.addExit("hall", hallway_5)
 
-                _152 = Room("Bathroom", "152", "")
+                _152 = Room("Bathroom", "152", "gifs/152.gif")
                 _152.addItem("toilet_paper", Descriptions.toilet_paper)
                 _152.addItem("dirty_sinks", Descriptions.dirty_sinks)
                 _152.addExit("hall", hallway_5)
 
-                _151 = Room("Optoelectronics Lab", "151", "")
+                _151 = Room("Optoelectronics Lab", "151", "gifs/151.gif")
                 _151.addItem("desks", Descriptions.desks)
                 _151.addItem("chairs", Descriptions.chairs)
                 _151.addExit("hall", hallway_4)
 
-                _149 = Room("Dr. Miguel Gates' Office", "149", "")
+                _149 = Room("Dr. Miguel Gates' Office", "149", "gifs/149.gif")
                 _149.addExit("hall", hallway_4)
                 _149.addItem("gates_desk", Descriptions.gates_desk)
                 _149.addItem("gates_books", Descriptions.gates_books)
 
-                _148 = Room("Storage", "148" , "")
+                _148 = Room("Storage", "148" , "gifs/148.gif")
                 _148.addExit("hall", hallway_4)
                 _148.addItem("piles_of_junk", Descriptions.piles_of_junk)
 
-                _147 = Room("Dr. Andrey Timofeyev's Office", "147", "")
+                _147 = Room("Dr. Andrey Timofeyev's Office", "147", "gifs/147.gif")
                 _147.addItem("key", Descriptions.key)
-                _147.addItem("andres_desk", Descriptions.andres_desk)
-                _147.addItem("andres_computer ", Descriptions.andres_computer)
+                _147.addItem("andreys_desk", Descriptions.andres_desk)
+                _147.addItem("andreys_computer ", Descriptions.andres_computer)
                 _147.addGrabbable("key")
                 _147.addExit("hall", hallway_4)
 
-                _146 = Room("Classroom", "146" , "", True)
+                _146 = Room("Classroom", "146" , "gifs/146.gif", True)
                 _146.addExit("hall", hallway_4)
                 _146.addItem("desks", Descriptions.desks)
                 _146.addItem("chairs", Descriptions.chairs)
 
-                _145 = Room("Classroom", "145", "")
+                _145 = Room("Classroom", "145", "gifs/145.gif")
                 _145.addExit("hall", hallway_4)
                 _145.addItem("desks", Descriptions.desks)
                 _145.addItem("chairs", Descriptions.chairs)
 
-                _144 = Room("Computer Lab", "144", "")
+                _144 = Room("Computer Lab", "144", "gifs/144.gif")
                 _144.addExit("hall", hallway_4)
                 _144.addItem("computers", Descriptions.computers)
                 _144.addItem("chairs", Descriptions.chairs)
 
-                _143 = Room("Unoccupied Office", "143", "", True)
+                _143 = Room("Unoccupied Office", "143", "gifs/143.gif", True)
                 _143.addExit("hall", hallway_4)
                 _143.addItem("walls", Descriptions.walls)
 
-                _142 = Room("The Grid", "142", "")
+                _142 = Room("The Grid", "142", "gifs/142.gif")
                 _142.addExit("hall", hallway_4)
                 _142.addItem("chained_power_strips", Descriptions.chained_power_strips)
                 _142.addItem("couches", Descriptions.couches)
                 _142.addItem("paintintgs", Descriptions.paintings)
 
-                _141 = Room("Charlotte Wilkerson's Office", "141", "")
+                _141 = Room("Charlotte Wilkerson's Office", "141", "gifs/141.gif")
                 _141.addExit("hall", hallway_4)
                 _141.addItem("wilkersons_desk", Descriptions.wilkersons_desk)
                 _141.addItem("wilkersons_pictures", Descriptions.wilkersons_pictures)
 
-                _140 = Room("Big Classroom", "140", "")
+                _140 = Room("Big Classroom", "140", "gifs/140.gif")
                 _140.addExit("hall", hallway_3)
                 _140.addItem("desks", Descriptions.desks)
                 _140.addItem("chairs", Descriptions.chairs)
 
-                _138 = Room("Storage", "138", "", True)
+                _138 = Room("Storage", "138", "gifs/138.gif", True)
                 _138.addExit("hall", hallway_3)
                 _138.addItem("piles_of_junk", Descriptions.piles_of_junk)
 
-                _136 = Room("Conference Room", "136", "")
+                _136 = Room("Conference Room", "136", "gifs/136.gif")
                 _136.addExit("hall", hallway_3)
                 _136.addItem("table", Descriptions.table)
                 _136.addItem("the_chairs", Descriptions.the_chairs)
 
-                _134 = Room("Faculty Bathroom", "134", "")
+                _134 = Room("Faculty Bathroom", "134", "gifs/134.gif")
                 _134.addExit("hall", hallway_3)
                 _134.addItem("toilet_paper", Descriptions.toilet_paper)
                 _134.addItem("dirty_sink", Descriptions.dirty_sink)
                 _134.addGrabbable("dirty_sink")
 
-                _132 = Room("Bathroom", "132", "")
+                _132 = Room("Bathroom", "132", "gifs/132.gif")
                 _132.addExit("hall", hallway_3)
                 _132.addItem("toilet_paper", Descriptions.toilet_paper)
                 _132.addItem("dirty_sinks", Descriptions.dirty_sinks)
 
-                _130 = Room("Janitor" , "130", "", False)
+                _130 = Room("Janitor" , "130", "gifs/130.gif", False)
                 _130.addItem("janitor_keys", Descriptions.keys)
                 _130.addItem("cleaning_supplies", Descriptions.cleaning_supplies)
                 _130.addGrabbable("janitor_keys")
                 _130.addExit("hall", hallway_3)
 
-                _128 = Room("Bathroom", "128", "")
+                _128 = Room("Bathroom", "128", "gifs/128.gif")
                 _128.addItem("writing_on_the_walls", Descriptions.writing_on_the_walls)
                 _128.addItem("vacant_stall", Descriptions.vacant_stall)
                 _128.addItem("toilet_paper", "")
                 _128.addGrabbable("toilet_paper")
                 _128.addExit("hall", hallway_3)
 
-                _127 = Room("Dean Waiting Room", "127", "")
+                _127 = Room("Dean Waiting Room", "127", "gifs/127.gif")
                 _127.addExit("hall", hallway_2)
                 _127.addItem("more_chairs", Descriptions.more_chairs)
 
-                _125 = Room("Office", "125", "", True)
+                _125 = Room("Office", "125", "gifs/125.gif", True)
                 _125.addExit("hall", hallway_2)
                 _125.addItem("walls", Descriptions.walls)
 
-                _123 = Room("Office", "123", "")
+                _123 = Room("Office", "123", "gifs/123.gif")
                 _123.addExit("hall", hallway_2)
                 _123.addItem("walls", Descriptions.walls)
 
-                _122 = Room("Classroom", "122", "")
+                _122 = Room("Classroom", "122", "gifs/122.gif")
                 _122.addExit("hall", hallway_2)
                 _122.addItem("desks", Descriptions.desks)
                 _122.addItem("chairs", Descriptions.chairs)
 
-                _121 = Room("Dr. Galen E. Turner's Office", "121", "", True)
+                _121 = Room("Dr. Galen E. Turner's Office", "121", "gifs/121.gif", True)
                 _121.addExit("hall", hallway_2)
                 _121.addItem("turners_desk", Descriptions.turners_desk)
                 _121.addItem("turners_book_shelves", Descriptions.turners_book_shelves)
 
-                _120 = Room("Classroom", "120", "")
+                _120 = Room("Classroom", "120", "gifs/120.gif")
                 _120.addExit("hall", hallway_2)
                 _120.addItem("desks", Descriptions.desks)
                 _120.addItem("chairs", Descriptions.chairs)
 
-                _119 = Room("Dr. Ben Choi's Office", "119", "")
+                _119 = Room("Dr. Ben Choi's Office", "119", "gifs/119.gif")
                 _119.addExit("hall", hallway_2)
                 _119.addItem("chois_desk", Descriptions.chois_desk)
                 _119.addItem("chois_couch", Descriptions.chois_couch)
 
-                _118 = Room("Storage", "118", "")
+                _118 = Room("Storage", "118", "gifs/118.gif")
                 _118.addExit("hall", hallway_2)
                 _118.addItem("piles_of_junk", Descriptions.piles_of_junk)
 
-                _117 = Room("Dr. Ben Drozdenso's Office", "117", "")
+                _117 = Room("Dr. Ben Drozdenso's Office", "117", "gifs/117.gif")
                 _117.addExit("hall", hallway_2)
                 _117.addItem("drozdensos_books", Descriptions.drozdensos_books)
                 _117.addItem("drozdensos_desk", Descriptions.drozdensos_desk)
 
-                _115 = Room("Dr. Michael O'Neal's Office", "115", "")
+                _115 = Room("Dr. Michael O'Neal's Office", "115", "gifs/115.gif")
                 _115.addExit("hall", hallway_2)
                 _115.addItem("oneals_desk", Descriptions.oneals_desk)
                 _115.addItem("oneals_book_shelves", Descriptions.oneals_book_shelves)
 
-                _113 = Room("Office Extension", "113", "")
+                _113 = Room("Office Extension", "113", "gifs/113.gif")
                 _113.addExit("hall", hallway_2)
                 _113.addItem("lots_of_chairs", Descriptions.lots_of_chairs)
 
-                _111 = Room("Unoccupied Office", "111", "", True)
+                _111 = Room("Unoccupied Office", "111", "gifs/111.gif", True)
                 _111.addExit("hall", hallway_2)
                 _111.addItem("walls", Descriptions.walls)
 
-                _107 = Room("Secret Torture Room", "107", "", True)
+                _107 = Room("Secret Torture Room", "107", "gifs/107.gif", True)
 
-                _106 = Room("Instrument Room", "106", "")
+                _106 = Room("Instrument Room", "106", "gifs/106.gif")
                 _106.addExit("hall", hallway_1)
                 _106.addItem("desks", Descriptions.desks)
                 _106.addItem("chairs", Descriptions.chairs)
 
-                _105 = Room("Classroom", "105", "")
-                _105.addItem("andre", Descriptions.andre)
+                _105 = Room("Classroom", "105", "gifs/105.gif")
+                _105.addItem("andrey", Descriptions.andre)
                 _105.addItem("cart", Descriptions.cart)
                 _105.addItem("spare_parts", Descriptions.spare_parts)
                 _105.addItem("the_white_board", Descriptions.the_white_board)
@@ -263,23 +263,23 @@ class Game(Frame):
                 _105.addGrabbable("sticky_note")
                 _105.addExit("hall", hallway_1)
 
-                _104 = Room("Power System Labs", "104", "")
+                _104 = Room("Power System Labs", "104", "gifs/104.gif")
                 _104.addExit("hall", hallway_1)
                 _104.addItem("piles_of_junk", Descriptions.piles_of_junk)
 
-                _103 = Room("Machinary Classroom", "103", "")
+                _103 = Room("Machinary Classroom", "103", "gifs/103.gif")
                 _103.addExit("hall", hallway_1)
                 _103.addItem("big_machines", Descriptions.big_machines)
 
-                _102 = Room("Electrical Distribution", "102", "")
+                _102 = Room("Electrical Distribution", "102", "gifs/102.gif")
                 _102.addExit("hall", hallway_1)
                 _102.addItem("fuses", Descriptions.fuses)
 
-                _101 = Room("Data Mining Lab", "101", "")
+                _101 = Room("Data Mining Lab", "101", "gifs/101.gif")
                 _101.addExit("hall", hallway_1)
                 _101.addItem("computers", Descriptions.computers)
 
-                _100 = Room("Power Systems Lab", "100", "")
+                _100 = Room("Power Systems Lab", "100", "gifs/100.gif")
                 _100.addExit("hall", hallway_1)
                 _100.addItem("piles_of_junk", Descriptions.piles_of_junk)
 
@@ -346,13 +346,13 @@ class Game(Frame):
                 Game.player_input.focus()
 
                 img = None
-                Game.image = Label(self, width=WIDTH / 2, height=HEIGHT / 2, image=img)
+                Game.image = Label(self, bg="white", width=1274, height=660, anchor=CENTER, image=img)
                 Game.image.image = img
                 Game.image.pack(side=LEFT, fill=Y)
                 Game.image.pack_propagate(False)
 
                 text_frame = Frame(self, width=WIDTH / 2)
-                Game.text = Text(text_frame, bg="lightgrey", state=DISABLED)
+                Game.text = Text(text_frame, bg="lightgrey", state=DISABLED, font=("Courier New", 18))
                 Game.text.tag_configure("sysfix", font="Fixedsys")
                 Game.text.pack(fill=Y, expand=1)
                 text_frame.pack(side=RIGHT, fill=Y)
@@ -386,8 +386,6 @@ class Game(Frame):
                 self.setRoomImage()
                 # set status with intro
                 self.setStatus(Events.intro)
-                '''sleep(90)
-                self.setStatus(Events.Main)'''
 
         def inventory(self):
             print "test"
@@ -418,8 +416,8 @@ class Game(Frame):
                     or action == "sionara!"):
                         exit(0)
 
-                if (action == "c" or action == "C" or action == "character" or action == "status"):
-                        response = str(character)
+                if (action == "clear"):
+                        response = ""
 
                 words = action.split()
 
@@ -433,6 +431,11 @@ class Game(Frame):
                                         if (noun in Game.currentLoc.exits):
                                                 if not Game.currentLoc.exits.get(noun).locked:
                                                         Game.currentLoc = Game.currentLoc.exits[noun]
+
+                                                elif "janitor_keys" in Game.inventory:
+                                                        if Game.currentLoc.exits[noun].number == "6":
+                                                                Game.currentLoc = Game.currentLoc.exits[noun]
+                                                                response = "The key unlocked the door. Exited."
 
                                                         response = "Exited."
                                                 else:
@@ -450,10 +453,6 @@ class Game(Frame):
                                                                 Game.currentLoc = Game.currentLoc.rooms[noun]
                                                                 response = "The key unlocked the door. Room changed."
 
-#                                                 elif "janitor_keys" in Game.inventory:
-#                                                         if Game.currentLoc.rooms[noun].name == "Exit 6":
-#                                                                 Game.currentLoc = Game.currentLoc.rooms[noun]
-#                                                                 response = "The key unlocked the door. Room changed."
 
                                                 else:
                                                         response = "{} is locked.".format(Game.currentLoc.rooms.get(noun).name)
@@ -498,11 +497,19 @@ class Game(Frame):
                                                                 del self.grabbables[i]
                                                                 break
                         elif (verb == "about"):
-                                response = ""
+                                response = "Unknown room, exit, or item given."
                                 if hasattr(Game.currentLoc, 'rooms'):
-                                       if noun == "all":
-                                               for key, value in Game.currentLoc.rooms.iteritems():
-                                                       response += key + "\t" + value.name + "\n"
+                                        response = ""
+                                        if noun == "all":
+                                                for key, value in Game.currentLoc.rooms.iteritems():
+                                                        response += key + "\t" + value.name + "\n"
+
+                                        if (noun in Game.currentLoc.rooms):
+                                                response = "Room {}: {}".format(Game.currentLoc.rooms[noun].number, Game.currentLoc.rooms[noun].name)
+
+                                if (noun in Game.inventory):
+                                        desc = getattr(Descriptions, noun)
+                                        response = "'{}': {}".format(noun, desc)
 
 
                 self.setStatus(response)

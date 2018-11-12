@@ -3,6 +3,7 @@ from time import sleep
 from game_module import Game
 from modules import *
 from config import *
+from breadboard import *
 
 
 def run():
@@ -38,11 +39,14 @@ def run():
 
         if difficulty.lower() == "easy":
             delay = randint(20, 30)
+            
         elif difficulty.lower() == "normal":
             delay = randint(10, 20)
+            
         elif difficulty.lower() == "hard":
             delay = randint(5, 10)
 
+            
         if debug:
             print "\nDelay: {}".format(delay)
 

@@ -148,8 +148,10 @@ class Room(object):
 
             # next, the items in the room
             s += "You see: "
-            for item in self.items.keys():
-                s += item + " "
+            for item in self.items.keys()[:-1]:
+                s += item + ", "
+
+            s += self.items.keys()[-1]
             s += "\n\n"
 
             # next, the exits from the room

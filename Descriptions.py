@@ -232,6 +232,3 @@ orange_juice = "Refreshing juice, you've had a long day. They say orange juice m
 
 ##### Lounge #####
 belt = "You could use this belt to help keep your pants from falling down when you run."
-
-
-
